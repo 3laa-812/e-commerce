@@ -15,7 +15,7 @@ const Search = () => {
   return (
     <form action="/search" method="get" className="flex items-stretch h-10">
       <Select name="category">
-        <SelectTrigger className="w-32 rounded-md border border-gray-300 bg-white hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500">
+        <SelectTrigger className="w-30 rounded-md border rounded-e-none ">
           <SelectValue placeholder="Category" />
         </SelectTrigger>
         <SelectContent>
@@ -28,16 +28,16 @@ const Search = () => {
         </SelectContent>
       </Select>
       <Input
-        className="flex-1 rounded-none dark:border-gray-200 bg-gray-100 text-black text-base h-full"
+        className="flex-1 rounded-none dark:border-gray-200 bg-gray-100 text-black text-base "
         placeholder={`Search Site ${APP_NAME}`}
         name="q"
         type="search"
       />
       <button
         type="submit"
-        className="bg-primary text-primary-foreground rounded-s-none rounded-e-md h-full px-3 py-2"
+        className="bg-primary text-primary-foreground rounded-s-none rounded-e-md px-3 h-9"
       >
-        <SearchIcon className="h-6 w-6" />
+        <SearchIcon className="h-5 w-5" />
       </button>
     </form>
   );
