@@ -1,10 +1,6 @@
 import data from "@/lib/data";
 import { connectToDatabase } from ".";
 import Product from "./models/product.model";
-import { cwd } from "process";
-import { loadEnvConfig } from "@next/env";
-
-loadEnvConfig(cwd());
 
 const main = async () => {
   try {

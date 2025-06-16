@@ -10,15 +10,9 @@ export const connectToDatabase = async (
 
   if (!MONGODB_URI) throw new Error("MONGODB_URI is missing");
 
-  // Ensure the connection string is properly encoded
-  const encodedURI = encodeURI(MONGODB_URI);
-  
-  try {
-    cached.promise = cached.promise || mongoose.connect(encodedURI);
-    cached.conn = await cached.promise;
-    return cached.conn;
-  } catch (error) {
-    console.error("MongoDB connection error:", error);
-    throw error;
-  }
+  cached.promise = cached.promise || mongoose.connect(MONGODB_URI);
+
+  cached.conn = await cached.promise;
+
+  return cached.conn;
 };
