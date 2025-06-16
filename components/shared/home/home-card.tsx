@@ -28,7 +28,7 @@ export function HomeCard({ cards }: { cards: CardItem[] }) {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="flex flex-col p-2 rounded-md border border-gray-200 shadow-md hover:shadow-lg transition-all duration-200"
+                  className="flex flex-col p-2 rounded-md border-none border-gray-200 shadow-md hover:shadow-lg transition-all duration-200"
                 >
                   <Image
                     src={item.image}
