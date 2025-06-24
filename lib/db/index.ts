@@ -1,5 +1,6 @@
+import dotenv from "dotenv";
+dotenv.config(); // ← this line loads your .env file
 import mongoose from "mongoose";
-
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const cached = (global as any).mongoose || { conn: null, promise: null };
 
