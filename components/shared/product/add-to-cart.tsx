@@ -50,7 +50,7 @@ export default function AddToCart({
       className="rounded-full w-auto"
       onClick={handleAddToCart}
       disabled={item.countInStock === 0}
-    >
+              >
       <ShoppingCart className="mr-2 h-4 w-4" />
       {item.countInStock === 0 ? "Out of Stock" : "Add to Cart"}
     </Button>
